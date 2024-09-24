@@ -31,7 +31,7 @@ These instructions will help you set up the project on your local machine for de
 
 ### Code Quality
 
-* **Linting** project is fully linted
+* **Linting**: project is fully linted
 * **Unit Testing**: some ode parts are tested
 
 ### Installation
