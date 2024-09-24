@@ -51,6 +51,7 @@ declare module 'styled-components' {
       'warning-content': string;
       error: string;
       'error-content': string;
+      white: string;
     };
 
     media: Record<keyof typeof sizes, (l: TemplateStringsArray, ...p: any[]) => string>;

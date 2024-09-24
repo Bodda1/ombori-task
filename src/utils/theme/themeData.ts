@@ -7,7 +7,7 @@ import { sizes } from './styled.d';
 import { type Typography } from './styled';
 
 const colors = {
-  primary: 'green',
+  primary: '#6BBE4F',
   'primary-content': '',
   secondary: '',
   'secondary-content': '',
@@ -27,6 +27,7 @@ const colors = {
   'warning-content': '',
   error: '',
   'error-content': '',
+  white: '#FFFFFF',
 };
 
 const media = Object.keys(sizes).reduce((acc, label) => {
