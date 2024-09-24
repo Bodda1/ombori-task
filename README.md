@@ -29,6 +29,11 @@ These instructions will help you set up the project on your local machine for de
   - the '/login' should show the login page if user not authenticated but in our case redirect to '/'
   any other route will show a 404 page
 
+### Code Quality
+
+* **Linting** project is fully linted
+* **Unit Testing**: some ode parts are tested
+
 ### Installation
 
 1. Clone the repository:
