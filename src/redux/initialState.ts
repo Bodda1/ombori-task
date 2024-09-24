@@ -1,3 +1,15 @@
+/** *****************************************************************
+* Copyright         : 2024 Abdallah Ibrahim
+* File Name         : initialState.ts
+* Description       : this file contains the initial state of the store
+*                    
+* Revision History  :
+* Date				Author    		Comments
+* ---------------------------------------------------------------------------
+* 24/09/2024		Abdallah Ibrahim		Created.
+*
+/***************************************************************** */
+
 import { status } from 'constants/general';
 
 type InitialCommonState = {

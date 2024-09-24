@@ -1,3 +1,15 @@
+/** *****************************************************************
+* Copyright         : 2024 Abdallah Ibrahim
+* File Name         : router.tsx
+* Description       : This file is responsible for converting routes array to actual routes
+*                    
+* Revision History  :
+* Date				Author    		Comments
+* ---------------------------------------------------------------------------
+* 24/09/2024		Abdallah Ibrahim		Created.
+*
+/***************************************************************** */
+
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 import NotFoundPage from 'pages/NotFoundPage';

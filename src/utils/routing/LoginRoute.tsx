@@ -1,3 +1,16 @@
+/** *****************************************************************
+* Copyright         : 2024 Abdallah Ibrahim
+* File Name         : LoginRoute.tsx
+* Description       : This file responsible for providing access to the login route
+* or denying it based on the user auth access
+*                    
+* Revision History  :
+* Date				Author    		Comments
+* ---------------------------------------------------------------------------
+* 24/09/2024		Abdallah Ibrahim		Created.
+*
+/***************************************************************** */
+
 import { useState, useEffect } from 'react';
 import { Navigate } from 'react-router-dom';
 

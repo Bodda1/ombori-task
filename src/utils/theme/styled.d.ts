@@ -1,3 +1,15 @@
+/** *****************************************************************
+* Copyright         : 2024 Abdallah Ibrahim
+* File Name         : styled.d.ts
+* Description       : This file contains the types declaration for the theme
+*                    
+* Revision History  :
+* Date				Author    		Comments
+* ---------------------------------------------------------------------------
+* 24/09/2024		Abdallah Ibrahim		Created.
+*
+/***************************************************************** */
+
 // import original module declarations
 import 'styled-components';
 

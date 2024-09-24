@@ -1,3 +1,16 @@
+/** *****************************************************************
+* Copyright         : 2024 Abdallah Ibrahim
+* File Name         : PrivateRoute.tsx
+* Description       : This file responsible for providing access to a private route
+* or denying it based on the user auth access
+*                    
+* Revision History  :
+* Date				Author    		Comments
+* ---------------------------------------------------------------------------
+* 24/09/2024		Abdallah Ibrahim		Created.
+*
+/***************************************************************** */
+
 import { useState, useEffect } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 

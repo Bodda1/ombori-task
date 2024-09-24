@@ -1,3 +1,15 @@
+/** *****************************************************************
+* Copyright         : 2024 Abdallah Ibrahim
+* File Name         : requests.ts
+* Description       : This file contains the core logic of api calls using axios
+*                    
+* Revision History  :
+* Date				Author    		Comments
+* ---------------------------------------------------------------------------
+* 24/09/2024		Abdallah Ibrahim		Created.
+*
+/***************************************************************** */
+
 import axios, { AxiosResponse } from 'axios';
 
 // here we define our request methods and each method uses axios directly

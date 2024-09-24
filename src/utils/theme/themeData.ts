@@ -1,3 +1,15 @@
+/** *****************************************************************
+* Copyright         : 2024 Abdallah Ibrahim
+* File Name         : themedata.ts
+* Description       : This file contains the entire app theme
+*                    
+* Revision History  :
+* Date				Author    		Comments
+* ---------------------------------------------------------------------------
+* 24/09/2024		Abdallah Ibrahim		Created.
+*
+/***************************************************************** */
+
 // eslint-disable-next-line eslint-comments/disable-enable-pair
 /* eslint-disable prettier/prettier */
 
@@ -30,6 +42,8 @@ const colors = {
   white: '#FFFFFF',
 };
 
+// this logic here loops over available sizes and creates media query for each
+// size so it can be used later in any style files using the theme object
 const media = Object.keys(sizes).reduce((acc, label) => {
   acc[label] = (literals: TemplateStringsArray, ...placeholders: any[]) => css`
      @media (max-width: ${sizes[label]}px) {
