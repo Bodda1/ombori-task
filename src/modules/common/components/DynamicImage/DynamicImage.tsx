@@ -1,7 +1,8 @@
-import Router from 'utils/routing';
-import GlobalStyles from 'utils/theme/globalStyles';
+import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-import { MainWrapper } from './MainContainer.style';
+import { type Props } from './dynamic-image';
+import { StyledImage } from './DynamicImage.style';
 
 // ###############################################################
 // <------------------------ Constants -------------------------->
@@ -9,7 +10,12 @@ import { MainWrapper } from './MainContainer.style';
 // ###############################################################
 // <---------------------- End Constants ------------------------>
 // ###############################################################
-const MainContainer = () => (
+const DynamicImage = ({
+  placeholderImageUrl,
+  imageUrl,
+  extendPlaceholderImageStyle,
+  extendImageStyle,
+}: Props) => {
   // ###############################################################
   // <------------------------- Globals --------------------------->
   // ###############################################################
@@ -19,12 +25,21 @@ const MainContainer = () => (
   // ###############################################################
   // <------------------------ useState --------------------------->
   // ###############################################################
+  const [imgSrc, setImgSrc] = useState(placeholderImageUrl || imageUrl);
   // ###############################################################
   // <---------------------- End useState ------------------------->
   // ###############################################################
   // ###############################################################
   // <------------------------ useEffect -------------------------->
   // ###############################################################
+  useEffect(() => {
+    const image = new Image();
+    image.src = imageUrl;
+
+    image.onload = () => {
+      setImgSrc(imageUrl);
+    };
+  }, [imageUrl]);
   // ###############################################################
   // <---------------------- End useEffect ------------------------>
   // ###############################################################
@@ -61,18 +76,27 @@ const MainContainer = () => (
   // ###############################################################
   // <------------------------- Return UI ------------------------->
   // ###############################################################
-  <>
-    <GlobalStyles />
-    <MainWrapper>
-      <Router />
-    </MainWrapper>
-  </>
-);
-// ###############################################################
-// <----------------------- End Return UI ----------------------->
-// ###############################################################
-MainContainer.propTypes = {};
+  return (
+    <StyledImage
+      src={imgSrc}
+      extendStyle={imgSrc === placeholderImageUrl ? extendPlaceholderImageStyle : extendImageStyle}
+    />
+  );
+  // ###############################################################
+  // <----------------------- End Return UI ----------------------->
+  // ###############################################################
+};
 
-MainContainer.defaultProps = {};
+DynamicImage.propTypes = {
+  placeholderImageUrl: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  extendPlaceholderImageStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  extendImageStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+};
 
-export default MainContainer;
+DynamicImage.defaultProps = {
+  extendPlaceholderImageStyle: '',
+  extendImageStyle: '',
+};
+
+export default DynamicImage;

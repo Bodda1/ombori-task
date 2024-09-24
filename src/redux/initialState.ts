@@ -9,9 +9,15 @@ type InitialUsersState = {
     status: string;
     override: boolean;
     details: {
-      data?: [];
+      total_pages?: number;
+      data?: any;
     };
   };
+};
+
+export type State = {
+  common: InitialCommonState;
+  users: InitialUsersState;
 };
 
 export const initialCommonState: InitialCommonState = {

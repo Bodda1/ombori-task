@@ -19,7 +19,7 @@ function* fetchUsersListSaga(action: FetchUsersListActions) {
       throw new Error(response.status.toString());
 
     if (callbackAction) callbackAction(true);
-    yield put(fetchUsersListSuccess({ ...response.data.data, override }));
+    yield put(fetchUsersListSuccess({ ...response.data, override }));
   } catch (error) {
     if (callbackAction) callbackAction();
     yield put(fetchUsersListFail({ override }));

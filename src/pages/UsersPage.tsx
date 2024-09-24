@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 import initApp from 'utils/functions/init';
 import { contexts } from 'constants/context';
-import NotFoundView from 'modules/general/views/NotFoundView';
+import UsersView from 'modules/users/views/UsersView';
 
 // ###############################################################
 // <------------------------ Constants -------------------------->
@@ -65,7 +65,7 @@ const UsersPage = () => {
   // ###############################################################
   // <------------------------- Return UI ------------------------->
   // ###############################################################
-  return <NotFoundView />;
+  return <UsersView />;
   // ###############################################################
   // <----------------------- End Return UI ----------------------->
   // ###############################################################

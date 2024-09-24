@@ -34,12 +34,12 @@ declare module 'styled-components' {
       primary: string;
       'primary-content': string;
       secondary: string;
-      'secondary-content': string;
+      secondaryContent: string;
       accent: string;
       'accent-content': string;
       neutral: string;
       'neutral-content': string;
-      'base-100': string;
+      base100: string;
       'base-200': string;
       'base-300': string;
       'base-content': string;

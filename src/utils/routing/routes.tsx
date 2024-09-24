@@ -1,4 +1,4 @@
-import UsersPage from 'pages/AuthenticationPage';
+import UsersPage from 'pages/UsersPage';
 
 const routes = {
   public: [

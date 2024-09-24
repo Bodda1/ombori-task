@@ -1,7 +1,7 @@
 export type Props = {
   gap: number;
   mobileGap: number;
-  withSeparator: number;
+  withSeparator: boolean;
   separatorGap: number;
   separatorMobileGap: number;
   borderColor: string;

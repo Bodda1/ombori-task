@@ -18,17 +18,26 @@ export const usersSlice = createSlice({
       };
     },
     fetchUsersListSuccess: (state, { payload }) => {
-      const currentData = state.users.details.data;
-      let updatedData = [];
-      if (payload.override) updatedData = payload.data;
-      else if (currentData) updatedData = [...currentData, payload.results];
+      // const currentData = state.users.details.data;
+      // let updatedData = [];
+      // if (payload.override) updatedData = payload.data;
+      // else if (currentData) updatedData = [...currentData, payload.data];
+
+      // state.users = {
+      //   status: status.SUCCESS,
+      //   override: payload.override,
+      //   details: {
+      //     ...payload,
+      //     data: updatedData,
+      //   },
+      // };
 
       state.users = {
         status: status.SUCCESS,
         override: payload.override,
         details: {
           ...payload,
-          data: updatedData,
+          data: payload.override ? payload.data : [...state.users.details.data, ...payload.data],
         },
       };
     },
